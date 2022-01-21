@@ -25,6 +25,7 @@ namespace AM.UMS.BackEnd.Data
         [Required]
         public int MobileNo { get; set; }
 
+        //Navigation Property
         public List<Order> Orders { get; set; }
     }
 }

@@ -18,14 +18,11 @@ namespace AM.UMS.BackEnd.Data
         [Required]
         public string Password { get; set; }
 
-        [Required]
         [MaxLength(50)]
         public string Email { get; set; }
 
-        [Required]
         public bool IsActive { get; set; }
 
-        [Required]
         public string Token { get; set; }
     }
 }

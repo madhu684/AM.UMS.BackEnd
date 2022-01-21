@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace AM.UMS.BackEnd.Data
 {
-    public class Order
+    public class Item
     {
         [Key]
-        public int OrderID { get; set; }
+        public int ItemID { get; set; }
 
         [Required]
-        public decimal OrderValue { get; set; }
+        public int ItemCode { get; set; }
 
         [Required]
-        public DateTime OrderDate { get; set; }
+        public string ItemName { get; set; }
+
+        [Required]
+        public decimal UnitPrice { get; set; }
 
         //Navigation Property
         public List<ItemOrder> ItemOrders { get; set; }
-
     }
 }

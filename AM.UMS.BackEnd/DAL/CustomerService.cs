@@ -27,7 +27,7 @@ namespace AM.UMS.BackEnd.DAL
             try
             {
                 var customer = _context.Customers
-                                .Include(o => o.Orders)
+                                .Include(o => o.Orders).ThenInclude(x => x.ItemOrders)
                                 .ToList();
 
                 //return null if user is not found
